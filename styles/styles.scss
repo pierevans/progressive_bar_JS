@@ -86,7 +86,7 @@ $secondary-color-3: rgb(184, 184, 184);
     flex-direction: column;
     font-weight: 700;
     width: 200px;
-    
+
     .link {
       position: relative;
       margin: 50px 0 30px 0;
@@ -114,10 +114,39 @@ $secondary-color-3: rgb(184, 184, 184);
       }
     }
 
-    .first::after {
-       
-        width: 0px;
-        height: 0px;
+    .active {
+        position: relative;
+        margin: 50px 0 30px 0;
+        border-radius: 50%;
+        background-color: $primary-color-3;
+        color: white;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 2;
+        .fa-check {
+            display: flex;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 5px;
+            background-color: $primary-color-3;
+            right: 30px;
+        }
+        span {
+            display: none;
+        }
+        
+    }
+    .one::after {
+      width: 0px;
+      height: 0px;
     }
   }
 }
